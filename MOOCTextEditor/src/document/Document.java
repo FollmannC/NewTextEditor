@@ -20,6 +20,7 @@ public abstract class Document {
 	protected Document(String text)
 	{
 		this.text = text;
+		//test comment
 	}
 	
 	/** Returns the tokens that match the regex pattern from the document 
