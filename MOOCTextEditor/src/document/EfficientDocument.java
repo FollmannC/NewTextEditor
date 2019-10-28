@@ -47,14 +47,34 @@ public class EfficientDocument extends Document {
 	{
 		// Call getTokens on the text to preserve separate strings that are 
 		// either words or sentence-ending punctuation.  Ignore everything
-		// That is not a word or a sentence-ending puctuation.
+		// That is not a word or a sentence-ending punctuation.
 		// MAKE SURE YOU UNDERSTAND THIS LINE BEFORE YOU CODE THE REST
 		// OF THIS METHOD.
 		List<String> tokens = getTokens("[!?.]+|[a-zA-Z]+");
+		boolean end = true;
+		for (String word : tokens)
+		{
+			
+			if (isWord(word)) {
+				numWords++;
+				end = true;
+			}
+			else {
+				numSentences++;
+				end = false;
+			}	
+			
+			}
 		
+		if (end)
+		{numSentences++;}
+		
+		}
+			
+			
 		// TODO: Finish this method.  Remember the countSyllables method from 
 		// Document.  That will come in handy here.  isWord defined above will also help.
-	}
+	
 
 	
 	/**
@@ -72,8 +92,8 @@ public class EfficientDocument extends Document {
 	 */
 	@Override
 	public int getNumSentences() {
-		//TODO: write this method.  Hint: It's simple
-		return 0;
+		//TODO: write this method.  Hint: It's simple FAKE NEWS
+		return numSentences;
 	}
 
 	
@@ -93,8 +113,8 @@ public class EfficientDocument extends Document {
 	 */
 	@Override
 	public int getNumWords() {
-		//TODO: write this method.  Hint: It's simple
-	    return 0;
+		//TODO: write this method.  Hint: It's simple FAKE NEWS
+	    return numWords;
 	}
 
 
@@ -115,8 +135,15 @@ public class EfficientDocument extends Document {
 	 */
 	@Override
 	public int getNumSyllables() {
-        //TODO: write this method.  Hint: It's simple
-        return 0;
+        //TODO: write this method.  Hint: It's simple FAKE NEWS
+		List<String> tokens = getTokens("[a-zA-Z]+");
+		
+		for (String word : tokens)
+		{
+			numSyllables += countSyllables(word);
+		}
+		
+        return numSyllables;
 	}
 	
 	// Can be used for testing
