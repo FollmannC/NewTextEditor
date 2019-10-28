@@ -38,6 +38,10 @@ public class EfficientDocument extends Document {
 		return !(tok.indexOf("!") >=0 || tok.indexOf(".") >=0 || tok.indexOf("?")>=0);
 	}
 	
+
+	
+	
+	
 	
     /** Passes through the text one time to count the number of words, syllables 
      * and sentences, and set the member variables appropriately.
@@ -62,11 +66,12 @@ public class EfficientDocument extends Document {
 			else {
 				numSentences++;
 				end = false;
+				
 			}	
 			
 			}
 		
-		if (end)
+		if (end && numWords != 0)
 		{numSentences++;}
 		
 		}
