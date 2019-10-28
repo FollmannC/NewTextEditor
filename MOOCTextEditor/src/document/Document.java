@@ -67,7 +67,7 @@ public abstract class Document {
 	{
 		// TODO: Implement this method so that you can call it from the 
 	    // getNumSyllables method in BasicDocument (module 2) and 
-	    // EfficientDocument (module 3).
+	    // EfficientDocument (module 3). 
 	    return 0;
 	}
 	
