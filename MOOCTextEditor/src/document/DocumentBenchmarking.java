@@ -76,9 +76,10 @@ public class DocumentBenchmarking {
 				}
 				long fourth = 0;
 				fourth = System.nanoTime();
-			
+				
 				double total2 = (fourth-third)/(1000000000);
-				System.out.println((total2)+" \t");
+				String strDouble = String.format("%.7f", total2);
+				System.out.print((strDouble)+" \n");
 			
 			/* Each time through this loop you should:
 			 * 1. Print out numToCheck followed by a tab (\t) (NOT a newline)
