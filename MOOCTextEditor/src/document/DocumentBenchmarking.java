@@ -44,7 +44,14 @@ public class DocumentBenchmarking {
 			// file to create both a BasicDocument and an EfficientDocument.  
 			System.out.print(numToCheck + " \t");
 			String returned = getStringFromFile(textfile, numToCheck);
+			for ( int i = 0; i < trials; i++) {
+				
+			BasicDocument firstdoc = new BasicDocument(returned);
+				firstdoc.getFleschScore();
+				
 			
+				
+			}
 			/* Each time through this loop you should:
 			 * 1. Print out numToCheck followed by a tab (\t) (NOT a newline)
 			 * 2. Read numToCheck characters from the file into a String
