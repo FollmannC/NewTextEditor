@@ -42,6 +42,8 @@ public class DocumentBenchmarking {
 		{
 			// numToCheck holds the number of characters that you should read from the 
 			// file to create both a BasicDocument and an EfficientDocument.  
+			System.out.print(numToCheck + " \t");
+			String returned = getStringFromFile(textfile, numToCheck);
 			
 			/* Each time through this loop you should:
 			 * 1. Print out numToCheck followed by a tab (\t) (NOT a newline)
