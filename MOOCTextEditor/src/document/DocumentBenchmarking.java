@@ -59,9 +59,10 @@ public class DocumentBenchmarking {
 			}
 			long second = 0;
 			second = System.nanoTime();
+			double total1 = 0;
+			total1 = (second-first);
+			System.out.print(((total1)/1000000000)+" \t");
 			
-			double total1 = (second-first)/(1000000000);
-			System.out.print((total1)+" \t");
 			long third = 0;
 			third = System.nanoTime();
 			
@@ -76,11 +77,11 @@ public class DocumentBenchmarking {
 				}
 				long fourth = 0;
 				fourth = System.nanoTime();
+				double total2 = 0;
+				total2 = (fourth-third);
 				
-				double total2 = (fourth-third)/(1000000000);
-				String strDouble = String.format("%.7f", total2);
-				System.out.print((strDouble)+" \n");
-			
+				System.out.print(((total2)/1000000000)+" \n");
+		 	
 			/* Each time through this loop you should:
 			 * 1. Print out numToCheck followed by a tab (\t) (NOT a newline)
 			 * 2. Read numToCheck characters from the file into a String
