@@ -20,7 +20,7 @@ public class BasicDocumentGrader {
                 String result = doc.getNumSentences() + " " + doc.getNumWords() + " " + doc.getNumSyllables() + " ";
                 System.out.print(result);
                 out.print(result);
-                //test hint
+                //test comment
             }
             out.print("\n");
             out.close();
