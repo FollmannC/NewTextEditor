@@ -68,6 +68,7 @@ public class EfficientDocument extends Document {
 				end = false;
 				
 			}	
+			numSyllables += countSyllables(word);
 			
 		}
 		
@@ -141,12 +142,12 @@ public class EfficientDocument extends Document {
 	@Override
 	public int getNumSyllables() {
         //TODO: write this method.  Hint: It's simple FAKE NEWS
-		List<String> tokens = getTokens("[a-zA-Z]+");
+		//List<String> tokens = getTokens("[a-zA-Z]+");
 		
-		for (String word : tokens)
-		{
-			numSyllables += countSyllables(word);
-		}
+		//for (String word : tokens)
+		//{
+		//	numSyllables += countSyllables(word);
+		//}
 		
         return numSyllables;
 	}
