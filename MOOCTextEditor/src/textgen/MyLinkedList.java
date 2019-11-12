@@ -47,10 +47,12 @@ public class MyLinkedList<E> extends AbstractList<E> {
 	public E get(int index) 
 	{
 		// TODO: Implement this method.
-		
+		if (index < 0 || index >= size) {
+			throw new IndexOutOfBoundsException();
+		}
 		
 		LLNode<E> node = head.next;
-		while (index >= 0) {
+		while (index > 0) {
 			node = node.next;
 		}
 
