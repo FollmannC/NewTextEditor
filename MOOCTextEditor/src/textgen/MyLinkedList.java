@@ -40,7 +40,13 @@ public class MyLinkedList<E> extends AbstractList<E> {
 	public E get(int index) 
 	{
 		// TODO: Implement this method.
-		return null;
+		LLNode<E> node = head.next;
+		while (index >= 0) {
+			node = node.next;
+		}
+
+		return node.data;
+		
 	}
 
 	/**
