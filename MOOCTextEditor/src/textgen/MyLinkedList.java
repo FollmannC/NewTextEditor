@@ -32,7 +32,14 @@ public class MyLinkedList<E> extends AbstractList<E> {
 	public boolean add(E element ) 
 	{
 		// TODO: Implement this method
-		return false;
+		LLNode<E> addNode = new LLNode<E>(element);
+		LLNode<E> prev = tail.prev;
+		prev.next = addNode;
+		addNode.prev = prev;
+		addNode.next = tail;
+		tail.prev = addNode;
+		size++;
+		return true;
 	}
 
 	/** Get the element at position index 
@@ -40,6 +47,8 @@ public class MyLinkedList<E> extends AbstractList<E> {
 	public E get(int index) 
 	{
 		// TODO: Implement this method.
+		
+		
 		LLNode<E> node = head.next;
 		while (index >= 0) {
 			node = node.next;
