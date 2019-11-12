@@ -54,6 +54,7 @@ public class MyLinkedList<E> extends AbstractList<E> {
 		LLNode<E> node = head.next;
 		while (index > 0) {
 			node = node.next;
+			index--;
 		}
 
 		return node.data;
