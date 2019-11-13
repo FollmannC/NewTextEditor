@@ -100,7 +100,7 @@ public class MyLinkedList<E> extends AbstractList<E> {
 		remNode.prev.next = remNode.next;
 		size--;
 		return remNode.data;
-		
+		//works
 	}
 
 	/**
