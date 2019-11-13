@@ -125,6 +125,11 @@ public class MyLinkedListTester {
 	{
         // TODO: implement this test
 		
+		
+		list1.add(1);
+		assertEquals((Integer)1, list1.get(3));
+		
+		
 	}
 
 	
@@ -132,6 +137,7 @@ public class MyLinkedListTester {
 	@Test
 	public void testSize()
 	{
+		assertEquals(3, list1.size());
 		// TODO: implement this test
 	}
 
