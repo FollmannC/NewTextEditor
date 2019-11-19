@@ -31,6 +31,11 @@ public class MyLinkedList<E> extends AbstractList<E> {
 	 */
 	public boolean add(E element ) 
 	{
+		
+		if (element == null) {
+			throw new NullPointerException("Invalid input");
+		}
+		
 		// TODO: Implement this method
 		LLNode<E> addNode = new LLNode<E>(element);
 		LLNode<E> prev = tail.prev;
