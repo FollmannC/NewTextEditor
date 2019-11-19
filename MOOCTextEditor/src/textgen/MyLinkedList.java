@@ -115,6 +115,10 @@ public class MyLinkedList<E> extends AbstractList<E> {
 	public E remove(int index) 
 	{
 		// TODO: Implement this method
+		if (index < 0 || index >= size) {
+			throw new IndexOutOfBoundsException();
+		}
+		
 		
 		LLNode<E> remNode = head.next;
 		while (index > 0) {
