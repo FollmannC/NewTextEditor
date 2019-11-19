@@ -112,8 +112,14 @@ public class MyLinkedList<E> extends AbstractList<E> {
 	 */
 	public E set(int index, E element) 
 	{
+		LLNode<E> setnode = head;
+		for (int i = 0; i <= index; i++) {
+			setnode = setnode.next;
+		}
+		setnode.data = element;
+		
 		// TODO: Implement this method
-		return null;
+		return element;
 	}   
 }
 
