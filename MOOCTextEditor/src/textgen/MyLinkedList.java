@@ -73,6 +73,9 @@ public class MyLinkedList<E> extends AbstractList<E> {
 			throw new NullPointerException("Invalid input");
 		}
 		
+		if ((index < 0 || index > size - 1) && (index != 0 || size != 0)) {
+			throw new IndexOutOfBoundsException("Invalid input");
+		}
 		
 		LLNode<E> addNode = new LLNode<E>(element);
 		LLNode<E> indexNode = head;
