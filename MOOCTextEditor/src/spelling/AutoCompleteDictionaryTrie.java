@@ -45,7 +45,7 @@ public class AutoCompleteDictionaryTrie implements  Dictionary, AutoComplete {
 		TrieNode node = root;
 		for( int i=0; i<word.length(); i++) {
 			char current = word.charAt(i);
-			if (node.getValidNextCharacters().equals(current))
+			if (node.getValidNextCharacters().contains(current))
 			{
 				node = node.getChild(current);
 						}
@@ -78,10 +78,28 @@ public class AutoCompleteDictionaryTrie implements  Dictionary, AutoComplete {
 	@Override
 	public boolean isWord(String s) 
 	{
-	    // TODO: Implement this method
-		return false;
+	    //TODO: Implement this method.
+		String word;
+		word = s.toLowerCase();
+		TrieNode node = root;
+		for( int i=0; i<word.length(); i++) {
+			char current = word.charAt(i);
+			if (node.getValidNextCharacters().equals(current))
+			{
+				node = node.getChild(current);
+						}
+			else {
+				node = node.insert(current);
+				size++;
+			}
+		}
+		if(node.endsWord()==true) {
+			return true;
+		}
+		
+    	return false;
+	    
 	}
-
 	/** 
      * Return a list, in order of increasing (non-decreasing) word length,
      * containing the numCompletions shortest legal completions 
