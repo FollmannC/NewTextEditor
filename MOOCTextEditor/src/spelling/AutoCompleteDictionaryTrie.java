@@ -78,6 +78,7 @@ public class AutoCompleteDictionaryTrie implements  Dictionary, AutoComplete {
 	 * described in the videos for this week. */
 	@Override
 	public boolean isWord(String s) 
+
 	{
 	    //TODO: Implement this method.
 		String word;
@@ -86,22 +87,20 @@ public class AutoCompleteDictionaryTrie implements  Dictionary, AutoComplete {
 		for( int i=0; i<word.length(); i++) {
 			char current = word.charAt(i);
 			if (node.getValidNextCharacters().contains(current))
-			{ node = node.getChild(current);
-			
-			}
+			{
+				node = node.getChild(current);
+						}
 			else {
 				return false;
-			}
-			if(node.endsWord()) {
-				return true;
-			}
-			
 				
-		
+			}
+		}
+		if(node.endsWord()) {
+			
+			return true;
 		}
 		
-		
-    	
+    	return false;
 	    
 	}
 	/** 
