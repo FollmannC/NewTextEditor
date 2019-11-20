@@ -51,10 +51,11 @@ public class AutoCompleteDictionaryTrie implements  Dictionary, AutoComplete {
 						}
 			else {
 				node = node.insert(current);
-				size++;
+				
 			}
 		}
-		if(node.endsWord()==true) {
+		if(node.endsWord()) {
+			size++;
 			return true;
 		}
 		
@@ -84,20 +85,23 @@ public class AutoCompleteDictionaryTrie implements  Dictionary, AutoComplete {
 		TrieNode node = root;
 		for( int i=0; i<word.length(); i++) {
 			char current = word.charAt(i);
-			if (node.getValidNextCharacters().equals(current))
-			{
-				node = node.getChild(current);
-						}
-			else {
-				node = node.insert(current);
-				size++;
+			if (node.getValidNextCharacters().contains(current))
+			{ node = node.getChild(current);
+			
 			}
-		}
-		if(node.endsWord()==true) {
-			return true;
+			else {
+				return false;
+			}
+			if(node.endsWord()) {
+				return true;
+			}
+			
+				
+		
 		}
 		
-    	return false;
+		
+    	
 	    
 	}
 	/** 
