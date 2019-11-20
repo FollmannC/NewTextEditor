@@ -53,7 +53,9 @@ public class AutoCompleteDictionaryTrie implements  Dictionary, AutoComplete {
 				node = node.insert(current);
 			}
 		}
-		
+		if(node.endsWord()==true) {
+			return true;
+		}
 		
     	return false;
 	    
