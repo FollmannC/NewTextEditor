@@ -21,7 +21,14 @@ public class DictionaryBST implements Dictionary
      * (it wasn't already there). */
     public boolean addWord(String word) {
     	// TODO: Implement this method
-        return false;
+    	word = word.toLowerCase();
+    	if(dict.contains(word)) {
+    		return false;
+    	}
+    	else {
+    		dict.add(word);
+        return true;
+    	}
     }
 
 
