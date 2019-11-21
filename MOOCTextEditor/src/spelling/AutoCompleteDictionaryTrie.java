@@ -54,7 +54,8 @@ public class AutoCompleteDictionaryTrie implements  Dictionary, AutoComplete {
 				
 			}
 		}
-		if(node.endsWord()) {
+		if(!node.endsWord()) {
+			node.setEndsWord(true);
 			size++;
 			return true;
 		}
