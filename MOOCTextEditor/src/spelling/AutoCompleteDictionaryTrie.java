@@ -155,7 +155,9 @@ public class AutoCompleteDictionaryTrie implements  Dictionary, AutoComplete {
  			}
  			
  		}
- 		
+ 		LinkedList<TrieNode> queue = new LinkedList<TrieNode>();
+		
+	
     	 
          return returnlist;
      }
