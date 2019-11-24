@@ -41,13 +41,16 @@ public class DictionaryBST implements Dictionary
     public int size()
     {
     	// TODO: Implement this method
-        return 0;
+        return dict.size();
     }
 
     /** Is this a word according to this dictionary? */
     public boolean isWord(String s) {
     	//TODO: Implement this method
-        return false;
+    	String word = s.toLowerCase();
+    	
+        return dict.contains(word);
+        
     }
 
 }
