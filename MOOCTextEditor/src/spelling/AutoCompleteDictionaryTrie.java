@@ -153,11 +153,11 @@ public class AutoCompleteDictionaryTrie implements  Dictionary, AutoComplete {
  			{
  				return returnlist;
  			}
- 			
+ 			current = next;
  		}
  		LinkedList<TrieNode> queue = new LinkedList<TrieNode>();
 		queue.add(current);
-		while(numCompletions >0) {
+		while(numCompletions >0 && !queue.isEmpty()) {
 			
 			next = queue.removeFirst();
 			if (next.endsWord()) {
